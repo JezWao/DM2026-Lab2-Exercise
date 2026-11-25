@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-11-23T10:11:21+00:00",
+  "source": "DM2026-Lab2-Master.ipynb, Section 9",
+  "seed": 42,
+  "labels": [
+    "anger",
+    "fear",
+    "joy",
+    "sadness"
+  ],
+  "frames": {
+    "train": "train.csv",
+    "test": "test.csv"
+  },
+  "tfidf_vectorizer": "tfidf_vectorizer.joblib",
+  "word2vec_vectors": "word2vec_vectors.kv",
+  "minilm_model": "all-MiniLM-L6-v2",
+  "representations": {
+    "tfidf": {
+      "kind": "sparse",
+      "train": "X_train_tfidf.npz",
+      "test": "X_test_tfidf.npz",
+      "n_features": 4190,
+      "retrieval": true
+    },
+    "word2vec": {
+      "kind": "dense",
+      "train": "X_train_word2vec.npy",
+      "test": "X_test_word2vec.npy",
+      "n_features": 100,
+      "retrieval": true
+    },
+    "doc2vec": {
+      "kind": "dense",
+      "train": "X_train_doc2vec.npy",
+      "test": "X_test_doc2vec.npy",
+      "n_features": 100,
+      "retrieval": false
+    },
+    "fasttext": {
+      "kind": "dense",
+      "train": "X_train_fasttext.npy",
+      "test": "X_test_fasttext.npy",
+      "n_features": 100,
+      "retrieval": false
+    },
+    "minilm": {
+      "kind": "dense",
+      "train": "X_train_minilm.npy",
+      "test": "X_test_minilm.npy",
+      "n_features": 384,
+      "retrieval": true
+    }
+  },
+  "models": {
+    "tfidf_linear_svm": "model_tfidf_linear_svm.joblib",
+    "tfidf_mlp": "model_tfidf_mlp.joblib",
+    "minilm_mlp": "model_minilm_mlp.joblib"
+  },
+  "master_results": "master_results.csv"
+}
